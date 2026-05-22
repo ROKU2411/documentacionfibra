@@ -1,96 +1,111 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useEffect } from "react";
 
 import "./ATP.css";
 
-import img1 from "../../assets/proyecto1.png";
-import img2 from "../../assets/proyecto2.png";
-import img3 from "../../assets/proyecto3.png";
-
-function ATP() {
-  const imagenes = [
+import img1 from "../../assets/images/atp/kmz.png";
+import img2 from "../../assets/images/atp/plano.png";
+import img3 from "../../assets/images/atp/plano2.png";
+import img4 from "../../assets/images/atp/unifilar.png";
+const imagenes = [
     {
       imagen: img1,
-      descripcion: "Dashboard principal del sistema ATP",
+      descripcion: "Kmz de recorridos de fibra y elementos en diseño y construcción",
     },
     {
       imagen: img2,
-      descripcion: "Modulo de gestion de usuarios",
+      descripcion: "Multi Dwelling Unit – MDU, diseño y entregables para unidades multifamiliares, predios privados. ",
+      
     },
     {
       imagen: img3,
-      descripcion: "Panel de estadisticas y reportes",
+      descripcion: "Single Dwelling Unit – SDU. Entregables de diseños de viviendas individuales, zonas externas, tanto cluster y subcluster. Recorridos desde Nodos principales hasta splitter de derivación, así como splitter secundarios de conexión final ",
+      
+    },
+    {
+      imagen: img4,
+      descripcion: "Unifilares de conexión. Entregables de unifilares de construcción, conexión y derivación hilo a hilo. Conservación de colores y bloques de acuerdo a requerimientos",
     },
   ];
 
+function ATP() {
+const [fade, setFade] = useState(true);
   const [index, setIndex] = useState(0);
 
   const siguiente = () => {
+    setFade(false);
+    setTimeout(() => {
     setIndex((prev) => (prev + 1) % imagenes.length);
+    setFade(true);
+  }, 200);
   };
 
   const anterior = () => {
-    setIndex((prev) =>
-      prev === 0 ? imagenes.length - 1 : prev - 1
-    );
-  };
+    setFade(false);
+    setTimeout(() => {
+    setIndex((prev) => (prev - 1 + imagenes.length) % imagenes.length);
+    setFade(true);
+  }, 200);
+  };  
 
+  const imagenActual = imagenes[index];
   return (
-    <div className="atp-container">
+  <div className="atp-container">
 
-      {/* 1. Proyecto */}
-      <h1 className="atp-title">Proyecto ATP</h1>
-
-      {/* 2. Descripción */}
-      <p className="atp-description">
-        Plataforma desarrollada para la gestion y monitoreo de
-        procesos tecnologicos, con dashboard interactivo,
-        administracion de usuarios y analiticas en tiempo real.
-      </p>
-
-      {/* 3. Galeria lateral */}
-      <div className="carousel-container">
-
-        <button className="arrow-btn left" onClick={anterior}>
-          <FaChevronLeft />
+    <div className="top-buttons">
+      <Link to="/">
+        <button className="nav-button">
+          Home
         </button>
+      </Link>
 
-        <div className="image-card">
-          <img
-            src={imagenes[index].imagen}
-            alt="Proyecto ATP"
-            className="atp-image"
-          />
-
-          <p className="image-description">
-            {imagenes[index].descripcion}
-          </p>
-        </div>
-
-        <button className="arrow-btn right" onClick={siguiente}>
-          <FaChevronRight />
+      <Link to="/projects/Onnet">
+        <button className="nav-button">
+          Siguiente Proyecto ONNET
         </button>
+      </Link>
     </div>
 
-      {/* 4. Botones inferiores */}
-      <div className="buttons-container">
+    <h1 className="atp-title">Proyecto ATP</h1>
 
-        <Link to="/">
-          <button className="nav-button">
-            Home
-          </button>
-        </Link>
+    <p className="atp-description">
+      Entregables tanto de diseño como As-Built...
+    </p>
 
-        <Link to="/projects/Onnet">
-          <button className="nav-button">
-            Siguiente Proyecto ONNET
-          </button>
-        </Link>
+    <div className="carousel-container">
 
+      <button
+        className="arrow-btn left"
+        onClick={anterior}
+        aria-label="Imagen anterior"
+      >
+        <FaChevronLeft />
+      </button>
+
+      <div className={`image-card ${fade ? "fade-in" : "fade-out"}`}>
+        <img
+          src={imagenActual.imagen}
+          alt="Proyecto ATP"
+          className="atp-image"
+        />
+
+        <p className="image-description">
+          {imagenActual.descripcion}
+        </p>
       </div>
 
+      <button
+        className="arrow-btn right"
+        onClick={siguiente}
+        aria-label="Imagen siguiente"
+      >
+        <FaChevronRight />
+      </button>
+
     </div>
+  </div>
   );
 }
 

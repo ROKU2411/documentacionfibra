@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useEffect } from "react";
 
-import "./Ufinet.css";
+import "./GestionPermisos.css";
 
 import img1 from "../../assets/images/atp/kmz.png";
 import img2 from "../../assets/images/atp/plano.png";
@@ -30,7 +30,7 @@ const imagenes = [
     },
   ];
 
-function Ufinet() {
+function Gestion() {
 const [fade, setFade] = useState(true);
   const [index, setIndex] = useState(0);
 
@@ -52,7 +52,7 @@ const [fade, setFade] = useState(true);
 
   const imagenActual = imagenes[index];
   return (
-  <div className="onnet-container">
+  <div className="gestion-container">
 
     <div className="top-buttons">
       <Link to="/">
@@ -61,16 +61,16 @@ const [fade, setFade] = useState(true);
         </button>
       </Link>
 
-      <Link to="/projects/Claro">
+      <Link to="/projects/ATP">
         <button className="nav-button">
-          Siguiente Proyecto CLARO
+          Siguiente Proyecto ATP
         </button>
       </Link>
     </div>
 
-    <h1 className="onnet-title">Proyecto UFINET</h1>
+    <h1 className="claro-title">Gestion de Permisos</h1>
 
-    <p className="onnet-description">
+    <p className="claro-description">
       Entregables tanto de diseño como As-Built...
     </p>
 
@@ -87,8 +87,8 @@ const [fade, setFade] = useState(true);
       <div className={`image-card ${fade ? "fade-in" : "fade-out"}`}>
         <img
           src={imagenActual.imagen}
-          alt="Proyecto Ufinet"
-          className="ufinet-image"
+          alt="Gestion de Permisos"
+          className="gestion-image"
         />
 
         <p className="image-description">
@@ -109,4 +109,4 @@ const [fade, setFade] = useState(true);
   );
 }
 
-export default Ufinet;
+export default Gestion;

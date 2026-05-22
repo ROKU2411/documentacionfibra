@@ -7,7 +7,7 @@ import ATP from "./pages/projects/ATP";
 import CLARO from "./pages/projects/Claro";
 import ITX from "./pages/projects/ITX";
 import ONNET from "./pages/projects/Onnet";
-import OTROS from "./pages/projects/Otros";
+import OTROS from "./pages/projects/GestionPermisos";
 import UFINET from "./pages/projects/Ufinet";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Route path="/projects/Claro" element={<CLARO />} />
         <Route path="/projects/ITX" element={<ITX />} />
         <Route path="/projects/Onnet" element={<ONNET />} />
-        <Route path="/projects/Otros" element={<OTROS />} />
+        <Route path="/projects/GestionPermisos" element={<OTROS />} />
         <Route path="/projects/Ufinet" element={<UFINET />} />
       </Routes>
     </BrowserRouter>

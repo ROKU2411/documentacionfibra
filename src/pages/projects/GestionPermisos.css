@@ -1,4 +1,4 @@
-.claro-container {
+.gestion-container {
   width: 100%;
   min-height: 100vh;
   background: #0f172a;
@@ -8,12 +8,12 @@
   position: relative;
 }
 
-.claro-title {
+.gestion-title {
   font-size: 48px;
   margin-bottom: 20px;
 }
 
-.claro-description {
+.gestion-description {
   max-width: 1000px;
   margin: auto;
   font-size: 20px;
@@ -73,7 +73,7 @@
   margin: auto;
 }
 
-.claro-image {
+.gestion-image {
   width: 60%;
   max-width: 500px;
   height: auto;
@@ -81,7 +81,7 @@
   object-fit: contain;
 }
 
-.claro-image:hover {
+.gestion-image:hover {
   transform: scale(1.02);
   transition: transform 0.3s ease;
 }

@@ -42,10 +42,10 @@ export default function Home() {
                 link: "/projects/ITX",
             },
             {
-                title: "OTROS",
+                title: "GESTION PERMISOS",
                 description:
                 "Organización y actualización de planos técnicos para ISP.",
-                link: "/projects/Otros",
+                link: "/projects/GestionPermisos",
             },
                      ];
 
