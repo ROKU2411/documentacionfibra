@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import disenoImg from "../../assets/home/diseño.jpg";
-import disenoImg from "../../assets/home/qgis.jpg";
+import disenoImg from "../../assets/home/diseno.jpg";
+import rutasImg from "../../assets/home/qgis.jpg";
 import documentoImg from "../../assets/home/documentacion.jpg";
 import certificaImg from "../../assets/home/trazas.png";
 
