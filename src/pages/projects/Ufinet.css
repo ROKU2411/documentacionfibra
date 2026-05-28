@@ -1,0 +1,143 @@
+.ufinet-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #0f172a;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.ufinet-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.ufinet-description {
+  max-width: 1000px;
+  margin: auto;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+
+.carousel-container {
+   margin-top: 2%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-description {
+  margin-top: 20px;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.8);
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.arrow-btn:hover {
+  background: #2563eb;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.left {
+  left: 20px;
+}
+
+.right {
+  right: 20px;
+}
+
+.image-card {
+  display: flex;
+  align-items: center;  
+  gap: 20px;             
+  max-width: 900px;
+  margin: auto;
+}
+
+.ufinet-image {
+  width: 60%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.ufinet-image:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.top-buttons{
+   position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.nav-button{
+  background: #000;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 12px 22px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.nav-button:hover{
+   background: #1f1f1f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.nav-button:active{
+  transform: scale(0.97);
+}
+
+.fade-in{
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.fade-out{
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.bottom-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
