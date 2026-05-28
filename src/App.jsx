@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 
 import Home from "./pages/Home";
-import Projects from "./pages/projects";
+import Projects from "./pages/Projects";
 
 import ATP from "./pages/projects/ATP";
 import CLARO from "./pages/projects/Claro";
@@ -31,7 +31,7 @@ function App() {
 
       <ToastContainer />
 
-      
+
     </BrowserRouter>
   );
 }
