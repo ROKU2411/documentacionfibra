@@ -22,6 +22,10 @@
 }
 
 .carousel-container {
+<<<<<<< HEAD
+=======
+  margin-top: 2%;
+>>>>>>> f4bfece (tercera subida)
   position: relative;
   width: 100%;
   display: flex;
@@ -30,6 +34,10 @@
 }
 
 .image-description {
+<<<<<<< HEAD
+=======
+  white-space: pre-line;
+>>>>>>> f4bfece (tercera subida)
   margin-top: 20px;
   font-size: 22px;
   line-height: 1.5;
@@ -132,4 +140,15 @@
 .fade-out{
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
+<<<<<<< HEAD
 }
+=======
+}
+
+.bottom-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+>>>>>>> f4bfece (tercera subida)
