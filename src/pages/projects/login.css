@@ -1,0 +1,11 @@
+.top-buttons{
+   position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-sizing: border-box;
+  z-index: 10;
+}
