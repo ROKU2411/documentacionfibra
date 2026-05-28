@@ -54,6 +54,17 @@ const [fade, setFade] = useState(true);
   return (
   <div className="onnet-container">
 
+<<<<<<< HEAD
+=======
+    <div className="bottom-buttons">
+      <Link to="/projects/ATP">
+        <button className="nav-button">
+          Anterior Proyecto ATP
+        </button>
+      </Link>
+    </div>
+
+>>>>>>> f4bfece (tercera subida)
     <div className="top-buttons">
       <Link to="/">
         <button className="nav-button">
@@ -71,7 +82,11 @@ const [fade, setFade] = useState(true);
     <h1 className="onnet-title">Proyecto UFINET</h1>
 
     <p className="onnet-description">
+<<<<<<< HEAD
       Entregables tanto de diseño como As-Built...
+=======
+      Entregables para gestión de permiso, construcción de red de fibra y entregables finales As-Built.
+>>>>>>> f4bfece (tercera subida)
     </p>
 
     <div className="carousel-container">

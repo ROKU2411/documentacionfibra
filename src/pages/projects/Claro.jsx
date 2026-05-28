@@ -5,10 +5,17 @@ import { useEffect } from "react";
 
 import "./Claro.css";
 
+<<<<<<< HEAD
 import img1 from "../../assets/images/atp/kmz.png";
 import img2 from "../../assets/images/atp/plano.png";
 import img3 from "../../assets/images/atp/plano2.png";
 import img4 from "../../assets/images/atp/unifilar.png";
+=======
+import img1 from "../../assets/images/Claro/kmz.png";
+import img2 from "../../assets/images/Claro/unifilar.png";
+import img3 from "../../assets/images/Claro/unifilar2.png";
+import img4 from "../../assets/images/Claro/plano.png";
+>>>>>>> f4bfece (tercera subida)
 const imagenes = [
     {
       imagen: img1,
@@ -26,8 +33,15 @@ const imagenes = [
     },
     {
       imagen: img4,
+<<<<<<< HEAD
       descripcion: "Unifilares de conexión. Entregables de unifilares de construcción, conexión y derivación hilo a hilo. Conservación de colores y bloques de acuerdo a requerimientos",
     },
+=======
+      descripcion: "Plano de red con convenciones definidas",
+      
+    },
+    
+>>>>>>> f4bfece (tercera subida)
   ];
 
 function Claro() {
@@ -54,6 +68,17 @@ const [fade, setFade] = useState(true);
   return (
   <div className="claro-container">
 
+<<<<<<< HEAD
+=======
+    <div className="bottom-buttons">
+      <Link to="/projects/Ufinet">
+        <button className="nav-button">
+          Anterior Proyecto Ufinet
+        </button>
+      </Link>
+    </div>
+
+>>>>>>> f4bfece (tercera subida)
     <div className="top-buttons">
       <Link to="/">
         <button className="nav-button">
@@ -71,7 +96,11 @@ const [fade, setFade] = useState(true);
     <h1 className="claro-title">Proyecto Claro</h1>
 
     <p className="claro-description">
+<<<<<<< HEAD
       Entregables tanto de diseño como As-Built...
+=======
+      Entregables tanto para solicitud de permiso, como para presentación final As-Built hacia operador de red
+>>>>>>> f4bfece (tercera subida)
     </p>
 
     <div className="carousel-container">

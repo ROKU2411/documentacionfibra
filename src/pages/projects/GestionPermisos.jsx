@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 import "./GestionPermisos.css";
 
+<<<<<<< HEAD
 import img1 from "../../assets/images/atp/kmz.png";
 import img2 from "../../assets/images/atp/plano.png";
 import img3 from "../../assets/images/atp/plano2.png";
@@ -22,11 +23,58 @@ const imagenes = [
     {
       imagen: img3,
       descripcion: "Single Dwelling Unit – SDU. Entregables de diseños de viviendas individuales, zonas externas, tanto cluster y subcluster. Recorridos desde Nodos principales hasta splitter de derivación, así como splitter secundarios de conexión final ",
+=======
+import img1 from "../../assets/images/gestionpermisos/aire.png";
+import img2 from "../../assets/images/gestionpermisos/celsia.png";
+import img3 from "../../assets/images/gestionpermisos/ebbsa.png";
+import img4 from "../../assets/images/gestionpermisos/emcali.png";
+import img5 from "../../assets/images/gestionpermisos/etb.png";
+import img6 from "../../assets/images/gestionpermisos/joinas.png";
+import img7 from "../../assets/images/gestionpermisos/otros.png";
+
+const imagenes = [
+    {
+      imagen: img1,
+      descripcion: "Gestión de Permisos ante electrificadora Air-e en el caribe, seguimiento lineamientos definidos por la misma con correos de contacto para radicación y seguimiento",
+    },
+    {
+      imagen: img2,
+      descripcion: "Gestión de permisos ante Celsia - Ufinet, con lineamientos establecidos por electrificadora, con correos de contacto, estos permisos deben gestionarse por medio de Ufinet administrador de red. ",
+    
+    },
+    {
+      imagen: img3,
+      descripcion: "Gestión de permisos de uso de torres EBBSA y posteria de electrificadora, Kmz con registros internos como se aprecia en la imagen, junto a demás documentación solicitada",
+>>>>>>> f4bfece (tercera subida)
       
     },
     {
       imagen: img4,
+<<<<<<< HEAD
       descripcion: "Unifilares de conexión. Entregables de unifilares de construcción, conexión y derivación hilo a hilo. Conservación de colores y bloques de acuerdo a requerimientos",
+=======
+      descripcion: "Tramites de permiso de uso en infraestructura existente EMCALI, valle del cauca. Lineamientos de acuerdo a especificaciones solicitadas, esta información debe radicarse por parte de compañía de manera física",
+    },
+    {
+      imagen: img5,
+      descripcion: "Trámite ante operadores de red, UNE, ETB, CLARO, UFINET, etc, cada operador tiene especificaciones definidas para permiso de uso de su infraestructura",
+    },
+    {
+      imagen: img6,
+      descripcion: "Proceso de radicación para permiso de uso en portal Join-As Enel, siguiente lineamientos y requerimientos de saturación, proceso de revisión, distancias normativas, documentación requerida, este requiere Usuario por parte de Enel hacia empresa operadora de red",
+    },
+    {
+      imagen: img7,
+      descripcion: `Actividades Adicionales:
+          1. Revisión de entregables finalizados, resumen de observaciones y estadísticas.
+          2. Documentación para licitaciones y proceso de adquisición de contratos en diseño.
+          3. Explicación y capacitación.
+          4. Conversión entre archivos, escala y georreferenciación de planos.
+          5. Documentación adicional como SiteSurvey, Renders de acceso y detalle, generación de cartografía, pre-relevamiento basado en bases de datos existentes.
+          6. Gestión de permisos ante Concesiones Viales - PMT, con requerimientos de cada concesión vial, ANI, INVIAS, ICCU, ETC.`,
+      width:500
+    
+>>>>>>> f4bfece (tercera subida)
     },
   ];
 
@@ -54,6 +102,17 @@ const [fade, setFade] = useState(true);
   return (
   <div className="gestion-container">
 
+<<<<<<< HEAD
+=======
+    <div className="bottom-buttons">
+      <Link to="/projects/ITX">
+        <button className="nav-button">
+          Anterior Proyecto ITX
+        </button>
+      </Link>
+    </div>
+
+>>>>>>> f4bfece (tercera subida)
     <div className="top-buttons">
       <Link to="/">
         <button className="nav-button">
@@ -71,7 +130,11 @@ const [fade, setFade] = useState(true);
     <h1 className="claro-title">Gestion de Permisos</h1>
 
     <p className="claro-description">
+<<<<<<< HEAD
       Entregables tanto de diseño como As-Built...
+=======
+      Gestión de permisos ante operadores de red, propietarios de infraestructura y documentación adicional.
+>>>>>>> f4bfece (tercera subida)
     </p>
 
     <div className="carousel-container">

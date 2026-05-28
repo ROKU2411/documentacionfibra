@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
 
+<<<<<<< HEAD
     const services = [
     "Diseño FTTH",
     "Distribución ODN",
@@ -10,41 +11,99 @@ export default function Home() {
     "Cálculo de Potencia Óptica",
     "Soporte para ISP",
     ];
+=======
+        const services = [
+            {
+                title: "Diseño FTTH",
+                description:
+                "Diseño de redes FTTH optimizadas para despliegues urbanos y rurales.",
+            },
+            {
+                title: "Distribución ODN",
+                description:
+                "Planificación y distribución eficiente de la red óptica pasiva (ODN).",
+            },
+            {
+                title: "Planos AutoCAD",
+                description:
+                "Elaboración de planos técnicos detallados en AutoCAD para proyectos de fibra óptica.",
+            },
+            {
+                title: "Documentación As-Built",
+                description:
+                "Generación de documentación final conforme a la ejecución del proyecto.",
+            },
+            {
+                title: "Cálculo de Potencia Óptica",
+                description:
+                "Análisis y cálculo de pérdidas ópticas para garantizar el rendimiento de la red.",
+            },
+            {
+                title: "Soporte para ISP",
+                description:
+                "Asistencia técnica especializada para proveedores de internet y telecomunicaciones.",
+            },
+            ];
+>>>>>>> f4bfece (tercera subida)
 
     const projects = [
             {
                 title: "ATP",
+<<<<<<< HEAD
                 description: "Diseño GPON para 128 hogares.",
+=======
+                description: "Entregables para proyectos ATP tanto MDU como SDU, así como troncales de conexión",
+>>>>>>> f4bfece (tercera subida)
                 link: "/projects/ATP",
             },
             {
                 title: "ONNET",
                 description:
+<<<<<<< HEAD
                 "Planeación de rutas principales, nodos y cajas para expansión de red.",
+=======
+                "Entregables para proyectos ONNET, Telefónica, cargues en Gestot, así como seguimientos y actualización de planos de diseño, construcción de red y obras civiles",
+>>>>>>> f4bfece (tercera subida)
                 link: "/projects/Onnet",
             },
             {
                 title: "UFINET",
                 description:
+<<<<<<< HEAD
                 "Organización y actualización de planos técnicos para ISP.",
+=======
+                "Entregables para despliegue de red Ufinet, despliegue de homepassed (Hogares-Pasados), tanto en verticales como externos, distribución de splitters y ramificaciones de ramales",
+>>>>>>> f4bfece (tercera subida)
                 link: "/projects/Ufinet",
             },
             {
                 title: "CLARO",
                 description:
+<<<<<<< HEAD
                 "Organización y actualización de planos técnicos para ISP.",
+=======
+                "Entregables Claro de acuerdo a requerimientos para proceso de cargue listo para Smallworld",
+>>>>>>> f4bfece (tercera subida)
                 link: "/projects/Claro",
             },
             {
                 title: "ITX",
                 description:
+<<<<<<< HEAD
                 "Organización y actualización de planos técnicos para ISP.",
+=======
+                "Carpetas de entregables para proyectos Internexa, simbología y especificaciones técnicas, revision de documentación de despliegues de fibra (No se realizan cargues en plataforma de ITX)",
+>>>>>>> f4bfece (tercera subida)
                 link: "/projects/ITX",
             },
             {
                 title: "GESTION PERMISOS",
                 description:
+<<<<<<< HEAD
                 "Organización y actualización de planos técnicos para ISP.",
+=======
+                "Entregables para permisos ante electrificadoras, predios privados, operadores dueños de infraestructura, ETB, Claro, Une, Telefonica, etc",
+>>>>>>> f4bfece (tercera subida)
                 link: "/projects/GestionPermisos",
             },
                      ];
@@ -75,6 +134,12 @@ export default function Home() {
                     <a href="#contact" className="hover:text-cyan-400 transition">
                     Contacto
                     </a>
+<<<<<<< HEAD
+=======
+                    <a href="/projects/login" className="hover:text-cyan-400 transition">
+                    Videos Capacitaciòn
+                    </a>
+>>>>>>> f4bfece (tercera subida)
                 </div>
                 </div>
             </nav>
@@ -418,6 +483,7 @@ export default function Home() {
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<<<<<<< HEAD
                     {services.map((service, index) => (
                     <div
                         key={index}
@@ -431,6 +497,24 @@ export default function Home() {
                         </p>
                     </div>
                     ))}
+=======
+                {services.map((service, index) => (
+                    <div
+                    key={index}
+                    className="bg-gray-900 border border-gray-800 rounded-3xl p-8 hover:border-cyan-400/40 hover:translate-y-[-5px] transition"
+                    >
+                    <div className="text-4xl mb-4">⚙️</div>
+
+                    <h4 className="text-xl font-semibold mb-3">
+                        {service.title}
+                    </h4>
+
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                        {service.description}
+                    </p>
+                    </div>
+                ))}
+>>>>>>> f4bfece (tercera subida)
                 </div>
                 </div>
             </section>
@@ -443,7 +527,11 @@ export default function Home() {
                     Proyectos
                     </h3>
                     <p className="text-gray-400">
+<<<<<<< HEAD
                     Ejemplos de diseño y documentación técnica.
+=======
+                  Experiencia en entregables y documentación
+>>>>>>> f4bfece (tercera subida)
                     </p>
                 </div>
                  <div className="grid lg:grid-cols-3 gap-8">

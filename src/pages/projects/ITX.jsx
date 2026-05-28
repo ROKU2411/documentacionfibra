@@ -5,10 +5,16 @@ import { useEffect } from "react";
 
 import "./ITX.css";
 
+<<<<<<< HEAD
 import img1 from "../../assets/images/atp/kmz.png";
 import img2 from "../../assets/images/atp/plano.png";
 import img3 from "../../assets/images/atp/plano2.png";
 import img4 from "../../assets/images/atp/unifilar.png";
+=======
+import img1 from "../../assets/images/itx/kmz.png";
+import img2 from "../../assets/images/itx/plano.png";
+import img3 from "../../assets/images/itx/unifilar.png";
+>>>>>>> f4bfece (tercera subida)
 const imagenes = [
     {
       imagen: img1,
@@ -16,11 +22,16 @@ const imagenes = [
     },
     {
       imagen: img2,
+<<<<<<< HEAD
       descripcion: "Multi Dwelling Unit – MDU, diseño y entregables para unidades multifamiliares, predios privados. ",
+=======
+      descripcion: "Planos en DWG, Shape, PDF, de construcciòn de red ",
+>>>>>>> f4bfece (tercera subida)
       
     },
     {
       imagen: img3,
+<<<<<<< HEAD
       descripcion: "Single Dwelling Unit – SDU. Entregables de diseños de viviendas individuales, zonas externas, tanto cluster y subcluster. Recorridos desde Nodos principales hasta splitter de derivación, así como splitter secundarios de conexión final ",
       
     },
@@ -28,6 +39,12 @@ const imagenes = [
       imagen: img4,
       descripcion: "Unifilares de conexión. Entregables de unifilares de construcción, conexión y derivación hilo a hilo. Conservación de colores y bloques de acuerdo a requerimientos",
     },
+=======
+      descripcion: "Unifilares de conexión, en Excel, DWG y formatos solicitados por cliente",
+      
+    },
+    
+>>>>>>> f4bfece (tercera subida)
   ];
 
 function ITX() {
@@ -54,6 +71,17 @@ const [fade, setFade] = useState(true);
   return (
   <div className="itx-container">
 
+<<<<<<< HEAD
+=======
+    <div className="bottom-buttons">
+      <Link to="/projects/Claro">
+        <button className="nav-button">
+          Anterior Proyecto Claro
+        </button>
+      </Link>
+    </div>
+
+>>>>>>> f4bfece (tercera subida)
     <div className="top-buttons">
       <Link to="/">
         <button className="nav-button">
@@ -71,7 +99,11 @@ const [fade, setFade] = useState(true);
     <h1 className="itx-title">Proyecto ITX</h1>
 
     <p className="ix-description">
+<<<<<<< HEAD
       Entregables tanto de diseño como As-Built...
+=======
+      Entregables de relevamiento, reportes de avance, seguimientos y documentación para entregables finales.
+>>>>>>> f4bfece (tercera subida)
     </p>
 
     <div className="carousel-container">

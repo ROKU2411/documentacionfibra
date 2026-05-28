@@ -54,6 +54,17 @@ const [fade, setFade] = useState(true);
   return (
   <div className="atp-container">
 
+<<<<<<< HEAD
+=======
+    <div className="bottom-buttons">
+      <Link to="/projects/GestionPermisos">
+        <button className="nav-button">
+          Anterior Proyecto Gestion de Permisos
+        </button>
+      </Link>
+    </div>
+
+>>>>>>> f4bfece (tercera subida)
     <div className="top-buttons">
       <Link to="/">
         <button className="nav-button">
@@ -71,7 +82,11 @@ const [fade, setFade] = useState(true);
     <h1 className="atp-title">Proyecto ATP</h1>
 
     <p className="atp-description">
+<<<<<<< HEAD
       Entregables tanto de diseño como As-Built...
+=======
+      Entregables tanto para diseño, como As-Built para proyectos de despliegue y expansión.
+>>>>>>> f4bfece (tercera subida)
     </p>
 
     <div className="carousel-container">
