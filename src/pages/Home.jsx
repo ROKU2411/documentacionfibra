@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import disenoImg from "../../assets/home/diseño.jpg";
+import disenoImg from "../../assets/home/qgis.jpg";
+import documentoImg from "../../assets/home/documentacion.jpg";
+import certificaImg from "../../assets/home/trazas.png";
 
 export default function Home() {
 
@@ -199,11 +203,11 @@ export default function Home() {
 
             {/* Imagen */}
             <div className="rounded-3xl overflow-hidden border border-cyan-500/20 shadow-2xl">
-                <img
-                src="/src/assets/home/diseño.jpg"
+            <img
+                src={disenoImg}
                 alt="FTTH Network"
                 className="w-full h-full object-cover hover:scale-105 transition duration-500"
-                />
+            />
             </div>
 
             {/* Contenido */}
@@ -291,7 +295,7 @@ export default function Home() {
 
             <div className="rounded-3xl overflow-hidden border border-cyan-500/20">
             <img
-                src="/src/assets/home/qgis.jpg"
+                src={rutasImg}
                 alt="Rutas FTTH"
                 className="w-full h-full object-cover hover:scale-105 transition duration-500"
             />
@@ -316,7 +320,7 @@ export default function Home() {
 
             <div className="rounded-3xl overflow-hidden border border-cyan-500/20">
             <img
-                src="/src/assets/home/documentacion.jpg"
+                src={documentoImg}
                 alt="Documentación Técnica"
                 className="w-full h-full object-cover hover:scale-105 transition duration-500"
             />
@@ -395,7 +399,7 @@ export default function Home() {
 
             <div className="rounded-3xl overflow-hidden border border-cyan-500/20">
             <img
-                src="/src/assets/home/trazas.png"
+                src={certificaImg}
                 alt="Potencia Óptica"
                 className="w-full h-full object-cover hover:scale-105 transition duration-500"
             />
