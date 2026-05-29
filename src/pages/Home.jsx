@@ -99,7 +99,7 @@ export default function Home() {
 
                 <div className="hidden md:flex gap-6 text-sm text-gray-300">
                     <a href="#about" className="hover:text-cyan-400 transition">
-                    Sobre mí
+                    Conocenos
                     </a>
                     <a href="#services" className="hover:text-cyan-400 transition">
                     Servicios
@@ -111,7 +111,7 @@ export default function Home() {
                     Contacto
                     </a>
                     <a href="/projects/login" className="hover:text-cyan-400 transition">
-                    Capacitaciones
+                    Ingreso Clientes
                     </a>
                 </div>
                 </div>
@@ -150,13 +150,13 @@ export default function Home() {
                     </button>
 
                     <button className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-2xl hover:bg-cyan-400 hover:text-black transition">
-                        <a href="#contact" className="hover:text-cyan-400 transition">
+                        <a href="#about" className="hover:text-cyan-400 transition">
                         Conocenos
                         </a>
                     </button>
 
                     <button className="bg-cyan-400 text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition">
-                        <a href="#projects" className="hover:text-cyan-400 transition">
+                        <a href="/projects/login" className="hover:text-cyan-400 transition">
                         Ingreso Clientes
                         </a>
                     </button>

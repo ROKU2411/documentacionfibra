@@ -13,6 +13,7 @@ import ONNET from "./pages/projects/Onnet";
 import OTROS from "./pages/projects/GestionPermisos";
 import UFINET from "./pages/projects/Ufinet";
 import LOGIN from "./pages/projects/login";
+import PPAL from "./pages/servicios/principal";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
         <Route path="/projects/Onnet" element={<ONNET />} />
         <Route path="/projects/GestionPermisos" element={<OTROS />} />
         <Route path="/projects/Ufinet" element={<UFINET />} />
-        <Route path="/projects/login" element={<LOGIN />} />
+        <Route path="/servicios/principal" element={<PPAL />} />
       </Routes>
 
       <ToastContainer />

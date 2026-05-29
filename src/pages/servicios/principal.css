@@ -1,0 +1,321 @@
+/* ===== RESET ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #0f172a;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+
+.principal-container {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px;
+
+  background:
+    radial-gradient(circle at top left, #164e63, transparent 30%),
+    radial-gradient(circle at bottom right, #0f766e, transparent 30%),
+    #020617;
+}
+
+/* ===== CARD ===== */
+
+.card {
+  width: 100%;
+  max-width: 900px;
+
+  background: rgba(15, 23, 42, 0.75);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(12px);
+
+  border-radius: 28px;
+
+  padding: 50px;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.45);
+}
+
+/* ===== HEADER ===== */
+
+.header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 38px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+/* ===== FORMULARIO ===== */
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ===== INPUTS ===== */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #cbd5e1;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input {
+  padding: 16px;
+
+  border-radius: 14px;
+
+  border: 1px solid #334155;
+
+  background: rgba(15, 23, 42, 0.7);
+
+  color: white;
+
+  font-size: 15px;
+
+  transition: 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: #64748b;
+}
+
+.form-group input:focus {
+  outline: none;
+
+  border-color: #22d3ee;
+
+  box-shadow:
+    0 0 0 4px rgba(34,211,238,0.15);
+}
+
+/* ===== GRID ARCHIVOS ===== */
+
+.files-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+}
+
+/* ===== FILE CARD ===== */
+
+.file-card {
+  background: rgba(15, 23, 42, 0.6);
+
+  border: 1px solid #334155;
+
+  border-radius: 20px;
+
+  padding: 24px;
+
+  transition: 0.3s ease;
+}
+
+.file-card:hover {
+  border-color: #22d3ee;
+
+  transform: translateY(-3px);
+}
+
+.file-card label {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: white;
+
+  font-weight: 700;
+}
+
+.file-card input[type="file"] {
+  color: #cbd5e1;
+}
+
+.file-name {
+  display: block;
+
+  margin-top: 14px;
+
+  color: #22d3ee;
+
+  font-size: 14px;
+}
+
+/* ===== BOTÓN ===== */
+
+.submit-btn {
+  border: none;
+
+  background: linear-gradient(
+    135deg,
+    #06b6d4,
+    #0891b2
+  );
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  padding: 18px;
+
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  box-shadow:
+    0 10px 30px rgba(6,182,212,0.35);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+
+  background: linear-gradient(
+    135deg,
+    #22d3ee,
+    #06b6d4
+  );
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  .card {
+    padding: 30px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+}
+
+/* ===== TÍTULO ===== */
+
+.file-title {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: white;
+
+  font-weight: 700;
+}
+
+/* ===== ZONA DE UPLOAD ===== */
+
+.upload-zone {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 170px;
+
+  border: 2px dashed #475569;
+
+  border-radius: 18px;
+
+  background: rgba(15, 23, 42, 0.5);
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.upload-zone:hover {
+  border-color: #22d3ee;
+
+  background: rgba(8, 145, 178, 0.08);
+
+  transform: translateY(-2px);
+}
+
+/* ===== CONTENIDO ===== */
+
+.upload-content {
+  text-align: center;
+
+  padding: 20px;
+}
+
+.upload-icon {
+  display: block;
+
+  font-size: 42px;
+
+  margin-bottom: 12px;
+}
+
+.upload-content p {
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  margin-bottom: 6px;
+}
+
+.upload-content small {
+  color: #94a3b8;
+
+  font-size: 13px;
+}
+
+/* ===== NOMBRE ARCHIVO ===== */
+
+.file-name {
+  display: block;
+
+  margin-top: 14px;
+
+  color: #22d3ee;
+
+  font-size: 14px;
+
+  word-break: break-word;
+}
