@@ -1,16 +1,79 @@
 import "./principal.css";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { ref, uploadBytes } from "firebase/storage";
 import { db, storage } from "../../firebase";
+import { Link } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../firebase";
 
 function Principal() {
-  const [empresa, setEmpresa] = useState("");
-  const [email, setEmail] = useState("");
-  const [plano, setPlano] = useState(null);
-  const [cartera, setCartera] = useState(null);
-  const [kmz, setKmz] = useState(null);
+    const [empresa, setEmpresa] = useState("");
+    const [email, setEmail] = useState("");
+    const [plano, setPlano] = useState(null);
+    const [cartera, setCartera] = useState(null);
+    const [kmz, setKmz] = useState(null);
+    const [tiempoRestante, setTiempoRestante] = useState("");
+    const [fechaLimite, setFechaLimite] = useState(null);
+    const [user, setUser] = useState(null);
+
+        useEffect(() => {
+        const usuario = localStorage.getItem("usuario");
+            const guardada = localStorage.getItem(
+            `fechaLimiteProyecto_${usuario}`
+            );
+
+        if (guardada) {
+            setFechaLimite(Number(guardada));
+        }
+        }, []);
+
+        useEffect(() => {
+        if (!fechaLimite) return;
+
+        const intervalo = setInterval(() => {
+            const diferencia = fechaLimite - Date.now();
+
+            if (diferencia <= 0) {
+            clearInterval(intervalo);
+            setTiempoRestante("Tiempo agotado");
+            return;
+            }
+
+            const horas = Math.floor(diferencia / (1000 * 60 * 60));
+            const minutos = Math.floor(
+            (diferencia % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            const segundos = Math.floor(
+            (diferencia % (1000 * 60)) / 1000
+            );
+
+            setTiempoRestante(
+            `${horas}h ${minutos}m ${segundos}s`
+            );
+        }, 1000);
+
+        return () => clearInterval(intervalo);
+
+        }, [fechaLimite]);
+
+            useEffect(() => {
+            const unsub = onAuthStateChanged(auth, (currentUser) => {
+                if (currentUser) {
+                setUser(currentUser);
+
+                const guardada = localStorage.getItem(
+                    `fechaLimiteProyecto_${currentUser.email}`
+                );
+
+                if (guardada) {
+                    setFechaLimite(Number(guardada));
+                }
+                }
+            });
+
+            return () => unsub();
+            }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,8 +105,17 @@ function Principal() {
           kmz
         );
       }
+      
 
       alert("Proyecto enviado correctamente 🚀");
+        const emailUser = user?.email;
+        const limite = Date.now() + 48 * 60 * 60 * 1000;
+        localStorage.setItem(
+        `fechaLimiteProyecto_${emailUser}`,
+        limite
+        );
+        setFechaLimite(limite);
+        alert("Proyecto enviado correctamente 🚀");
     } catch (error) {
       console.error(error);
       alert("Error al enviar el formulario ❌");
@@ -51,7 +123,22 @@ function Principal() {
   };
 
   return (
+    
+    
     <div className="principal-container">
+
+                    <div className="top-buttons">
+                <Link to="/">
+                    <button className="nav-button">
+                        Salir
+                    </button>
+                </Link>
+                </div>
+                {tiempoRestante && (
+                <div className="contador">
+                    ⏳ Tiempo restante: {tiempoRestante}
+                </div>
+                )}
 
       <div className="card">
 
@@ -163,6 +250,7 @@ function Principal() {
 
         </form>
       </div>
+      
     </div>
   );
 }

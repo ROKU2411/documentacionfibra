@@ -6,12 +6,12 @@ import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 
+
 function Login() {
 
   // 🔥 ESTADOS
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const navigate = useNavigate();
 
   // 🔐 LOGIN
@@ -20,7 +20,7 @@ function Login() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-
+      localStorage.setItem("usuario", email);
       toast.success("Login exitoso 🚀");
       navigate("/servicios/principal"); // o "/home" o "/dashboard"
 
@@ -33,7 +33,7 @@ function Login() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
 
       <div className="top-buttons">
-        <Link to="/servicios/principal">
+        <Link to="/">
           <button className="nav-button">
             Home
           </button>
@@ -87,11 +87,12 @@ function Login() {
           </div>
 
           <button
-            type="submit"
-            className="w-full py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 transition-all duration-300 text-white font-semibold shadow-lg"
-          >
-            Ingresar
-          </button>
+          type="submit"
+          onClick={handleLogin}
+          className="w-full py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 transition-all duration-300 text-white font-semibold shadow-lg"
+        >
+          Ingresar
+        </button>
         </form>
 
         <div className="mt-6 text-center">
