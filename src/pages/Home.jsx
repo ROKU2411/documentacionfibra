@@ -137,7 +137,7 @@ export default function Home() {
                     </button>
 
                     <button className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-2xl hover:bg-cyan-400 hover:text-black transition">
-                        <a href="#projects" className="hover:text-cyan-400 transition">
+                        <a href="#contact" className="hover:text-cyan-400 transition">
                         Contactarme
                         </a>
                     </button>
