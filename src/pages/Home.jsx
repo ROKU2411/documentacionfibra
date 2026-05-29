@@ -3,6 +3,7 @@ import disenoImg from "../assets/home/diseno.jpg";
 import rutasImg from "../assets/home/qgis.jpg";
 import documentoImg from "../assets/home/documentacion.jpg";
 import certificaImg from "../assets/home/trazas.png";
+import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
 export default function Home() {
 
@@ -548,18 +549,42 @@ export default function Home() {
                     <p className="text-gray-500 mb-2">Ubicación</p>
                     <h4 className="text-lg font-semibold">Bogota, Colombia</h4>
                     </div>
-
                     <div className="bg-black border border-gray-800 rounded-3xl p-6">
-                    <p className="text-gray-500 mb-2">WhatsApp</p>
-                    <h4 className="text-lg font-semibold">+57 317 3421059</h4>
-                    <h4 className="text-lg font-semibold">+57 313 8135814</h4>
+                    <p className="text-gray-500 mb-4">WhatsApp</p>
+
+                    <a
+                        href="https://wa.me/573173421059"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 text-lg font-semibold text-cyan-400 hover:text-cyan-300 transition mb-3"
+                    >
+                        <FaWhatsapp className="text-green-500 text-2xl" />
+                        +57 317 3421059
+                    </a>
+
+                    <a
+                        href="https://wa.me/573138135814"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 text-lg font-semibold text-cyan-400 hover:text-cyan-300 transition"
+                    >
+                        <FaWhatsapp className="text-green-500 text-2xl" />
+                        +57 313 8135814
+                    </a>
                     </div>
 
                     <div className="bg-black border border-gray-800 rounded-3xl p-6">
-                    <p className="text-gray-500 mb-2">Email</p>
-                    <h4 className="text-lg font-semibold">robinson.cuesta24@gmail.com</h4>
+                    <p className="text-gray-500 mb-4">Email</p>
+
+                    <a
+                        href="mailto:robinson.cuesta24@gmail.com"
+                        className="flex items-center gap-3 text-lg font-semibold text-cyan-400 hover:text-cyan-300 transition break-all"
+                    >
+                        <FaEnvelope className="text-red-500 text-2xl" />
+                        robinson.cuesta24@gmail.com
+                    </a>
                     </div>
-                </div>
+                 </div>
                 </div>
             </section>
 
