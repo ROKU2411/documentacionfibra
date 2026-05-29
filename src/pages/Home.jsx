@@ -3,7 +3,10 @@ import disenoImg from "../assets/home/diseno.jpg";
 import rutasImg from "../assets/home/qgis.jpg";
 import documentoImg from "../assets/home/documentacion.jpg";
 import certificaImg from "../assets/home/trazas.png";
-import { FaWhatsapp, FaEnvelope, FaAmilia, FaCircleNotch, FaUniregistry, FaCodiepie, FaInfo, FaMagento } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaAmilia, FaCircleNotch, FaUniregistry, FaCodiepie, FaInfo, FaMagento, FaHandPointer } from "react-icons/fa";
+import { CgEnter } from "react-icons/cg";
+import { CiTextAlignCenter } from "react-icons/ci";
+import logo from "../assets/images/logo.png";
 
 export default function Home() {
 
@@ -41,11 +44,13 @@ export default function Home() {
             ];
 
     const projects = [
-            {
+            {  
                 title: "ATP",
                 description: "Entregables para proyectos ATP tanto MDU como SDU, así como troncales de conexión",
                 link: "/projects/ATP",
                 icon: <FaAmilia />,
+                hint: "Haz clic para ver detalles"
+                
             },
             {
                 title: "ONNET",
@@ -53,13 +58,16 @@ export default function Home() {
                 "Entregables para proyectos ONNET, Telefónica, cargues en Gestot, así como seguimientos y actualización de planos de diseño, construcción de red y obras civiles",
                 link: "/projects/Onnet",
                 icon: <FaCircleNotch />,
+            
             },
             {
                 title: "UFINET",
                 description:
                 "Entregables para despliegue de red Ufinet, despliegue de homepassed (Hogares-Pasados), tanto en verticales como externos, distribución de splitters y ramificaciones de ramales",
                 link: "/projects/Ufinet",
-                icon: <FaUniregistry />,    
+                icon: <FaUniregistry />, 
+            
+                
             },
             {
                 title: "CLARO",
@@ -67,6 +75,7 @@ export default function Home() {
                 "Entregables Claro de acuerdo a requerimientos para proceso de cargue listo para Smallworld",
                 link: "/projects/Claro",
                 icon: <FaCodiepie />,   
+            
             },
             {
                 title: "ITX",
@@ -74,6 +83,8 @@ export default function Home() {
                 "Carpetas de entregables para proyectos Internexa, simbología y especificaciones técnicas, revision de documentación de despliegues de fibra (No se realizan cargues en plataforma de ITX)",
                 link: "/projects/ITX",
                 icon: <FaInfo />,   
+                
+                
             },
             {
                 title: "GESTION PERMISOS",
@@ -81,6 +92,7 @@ export default function Home() {
                 "Entregables para permisos ante electrificadoras, predios privados, operadores dueños de infraestructura, ETB, Claro, Une, Telefonica, etc",
                 link: "/projects/GestionPermisos",
                 icon: <FaMagento />,  
+                
             },
                      ];
 
@@ -92,12 +104,12 @@ export default function Home() {
         <div className="min-h-screen bg-black text-white font-sans">
             {/* Navbar */}
             <nav className="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md border-b border-gray-800 z-50">
-                <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
                 <h1 className="text-2xl font-bold text-cyan-400">
                     Redes de Fibra Optica - Robinson Cuesta
                 </h1>
 
-                <div className="hidden md:flex gap-6 text-sm text-gray-300">
+                <div className="hidden md:flex gap-4 text-sm text-gray-300">
                     <a href="#about" className="hover:text-cyan-400 transition">
                     Conocenos
                     </a>
@@ -112,6 +124,13 @@ export default function Home() {
                     </a>
                     <a href="/projects/login" className="hover:text-cyan-400 transition">
                     Ingreso Clientes
+                    </a>
+                    <a>
+                    <img
+                        src={logo}
+                        alt="Ingreso clientes"
+                        className="w-8 h-8"
+                    />
                     </a>
                 </div>
                 </div>
@@ -468,10 +487,12 @@ export default function Home() {
                     </h3>
                     <p className="text-gray-400">
                     Ejemplos de diseño y documentación técnica.
-                  Experiencia en entregables y documentación
+                    Experiencia en entregables y documentación
                     </p>
                 </div>
                  <div className="grid lg:grid-cols-3 gap-8">
+                    
+                    
                     {projects.map((project, index) => (
                         <Link
                         key={index}
