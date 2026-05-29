@@ -3,7 +3,7 @@ import disenoImg from "../assets/home/diseno.jpg";
 import rutasImg from "../assets/home/qgis.jpg";
 import documentoImg from "../assets/home/documentacion.jpg";
 import certificaImg from "../assets/home/trazas.png";
-import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaAmilia, FaCircleNotch, FaUniregistry, FaCodiepie, FaInfo, FaMagento } from "react-icons/fa";
 
 export default function Home() {
 
@@ -45,36 +45,42 @@ export default function Home() {
                 title: "ATP",
                 description: "Entregables para proyectos ATP tanto MDU como SDU, así como troncales de conexión",
                 link: "/projects/ATP",
+                icon: <FaAmilia />,
             },
             {
                 title: "ONNET",
                 description:
                 "Entregables para proyectos ONNET, Telefónica, cargues en Gestot, así como seguimientos y actualización de planos de diseño, construcción de red y obras civiles",
                 link: "/projects/Onnet",
+                icon: <FaCircleNotch />,
             },
             {
                 title: "UFINET",
                 description:
                 "Entregables para despliegue de red Ufinet, despliegue de homepassed (Hogares-Pasados), tanto en verticales como externos, distribución de splitters y ramificaciones de ramales",
                 link: "/projects/Ufinet",
+                icon: <FaUniregistry />,    
             },
             {
                 title: "CLARO",
                 description:
                 "Entregables Claro de acuerdo a requerimientos para proceso de cargue listo para Smallworld",
                 link: "/projects/Claro",
+                icon: <FaCodiepie />,   
             },
             {
                 title: "ITX",
                 description:
                 "Carpetas de entregables para proyectos Internexa, simbología y especificaciones técnicas, revision de documentación de despliegues de fibra (No se realizan cargues en plataforma de ITX)",
                 link: "/projects/ITX",
+                icon: <FaInfo />,   
             },
             {
                 title: "GESTION PERMISOS",
                 description:
                 "Entregables para permisos ante electrificadoras, predios privados, operadores dueños de infraestructura, ETB, Claro, Une, Telefonica, etc",
                 link: "/projects/GestionPermisos",
+                icon: <FaMagento />,  
             },
                      ];
 
@@ -145,7 +151,7 @@ export default function Home() {
 
                     <button className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-2xl hover:bg-cyan-400 hover:text-black transition">
                         <a href="#contact" className="hover:text-cyan-400 transition">
-                        Sobre mi
+                        Conocenos
                         </a>
                     </button>
 
@@ -473,9 +479,8 @@ export default function Home() {
                         className="bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden hover:scale-[1.02] transition block"
                         >
                         <div className="h-52 bg-gradient-to-br from-cyan-500/30 to-blue-500/10 flex items-center justify-center text-6xl">
-                            📡
+                            {project.icon}
                         </div>
-
                         <div className="p-8">
                             <h4 className="text-2xl font-semibold mb-4">
                             {project.title}
