@@ -16,7 +16,7 @@ import LOGIN from "./pages/projects/login";
 import PPAL from "./pages/servicios/principal";
 
 function App() {
-  return (
+  return (  
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -27,7 +27,9 @@ function App() {
         <Route path="/projects/Onnet" element={<ONNET />} />
         <Route path="/projects/GestionPermisos" element={<OTROS />} />
         <Route path="/projects/Ufinet" element={<UFINET />} />
+        <Route path="/projects/login" element={<LOGIN />} />
         <Route path="/servicios/principal" element={<PPAL />} />
+        
       </Routes>
 
       <ToastContainer />
