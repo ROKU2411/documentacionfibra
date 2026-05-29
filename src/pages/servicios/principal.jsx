@@ -116,7 +116,7 @@ function Principal() {
                     <label className="upload-zone">
                         <input
                         type="file"
-                        onChange={(e) => etCartera(e.target.files[0])}
+                        onChange={(e) => setCartera(e.target.files[0])}
                         hidden/>
                         <div className="upload-content">
                         <span className="upload-icon">
@@ -126,7 +126,7 @@ function Principal() {
                         <small>PDF, DWG, JPG, PNG...</small>
                         </div>
                     </label>
-                    {plano && (
+                    {cartera && (
                         <span className="file-name">
                         {cartera.name}
                         </span>
@@ -148,7 +148,7 @@ function Principal() {
                         <small>PDF, DWG, JPG, PNG...</small>
                         </div>
                     </label>
-                    {plano && (
+                    {kmz && (
                         <span className="file-name">
                         {kmz.name}
                         </span>
