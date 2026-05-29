@@ -142,6 +142,18 @@ export default function Home() {
                         Contactarme
                         </a>
                     </button>
+
+                    <button className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-2xl hover:bg-cyan-400 hover:text-black transition">
+                        <a href="#contact" className="hover:text-cyan-400 transition">
+                        Sobre mi
+                        </a>
+                    </button>
+
+                    <button className="bg-cyan-400 text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition">
+                        <a href="#projects" className="hover:text-cyan-400 transition">
+                        Ingreso Clientes
+                        </a>
+                    </button>
                     </div>
                 </div>
 
@@ -252,14 +264,6 @@ export default function Home() {
             </div>
             </div>
             
-            <div className="mt-12 text-center">
-            <a
-                href="#top"
-                className="inline-block bg-cyan-400 text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition"
-            >
-                ↑ Volver arriba
-            </a>
-            </div>
 
         </div>
         </section>
@@ -303,14 +307,7 @@ export default function Home() {
                 className="w-full h-full object-cover hover:scale-105 transition duration-500"
             />
             </div>
-            <div className="mt-12 text-center">
-            <a
-            href="#top"
-            className="inline-block bg-cyan-400 text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition"
-            >
-            ↑ Volver arriba
-            </a>
-            </div>
+    
         </div>
         </section>
 
@@ -355,14 +352,6 @@ export default function Home() {
 
             </div>
             </div>
-            <div className="mt-12 text-center">
-            <a
-            href="#top"
-            className="inline-block bg-cyan-400 text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition"
-            >
-            ↑ Volver arriba
-            </a>
-            </div>
         </div>
         </section>
 
@@ -406,15 +395,6 @@ export default function Home() {
                 alt="Potencia Óptica"
                 className="w-full h-full object-cover hover:scale-105 transition duration-500"
             />
-            </div>
-
-            <div className="mt-12 text-center">
-            <a
-                href="#top"
-                className="inline-block bg-cyan-400 text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition"
-            >
-                ↑ Volver arriba
-            </a>
             </div>
         </div>
         </section>
@@ -588,6 +568,11 @@ export default function Home() {
                 </div>
             </section>
 
+                <a
+                href="#top"
+                className="fixed bottom-6 right-6 bg-cyan-400 text-black w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold shadow-lg hover:scale-110 hover:bg-cyan-300 transition z-50"
+                >
+                ↑</a>
             {/* Footer */}
             <footer className="border-t border-gray-900 py-8 text-center text-gray-500 text-sm">
                 © 2026 Robinson Cuesta — Portafolio de Diseño FTTH & GPON
