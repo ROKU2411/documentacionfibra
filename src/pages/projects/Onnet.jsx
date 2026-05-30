@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 import "./Onnet.css";
 import img1 from "../../assets/images/onnet/kmz.png";
-import img2 from "../../assets/images/onet/plano.png";
+import img2 from "../../assets/images/onnet/plano.png";
 import img3 from "../../assets/images/onnet/cartera.png";
 
 const imagenes = [
