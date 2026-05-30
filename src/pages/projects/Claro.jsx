@@ -4,10 +4,10 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useEffect } from "react";
 
 import "./Claro.css";
-import img1 from "../../assets/images/atp/kmz.png";
-import img2 from "../../assets/images/atp/plano.png";
-import img3 from "../../assets/images/atp/plano2.png";
-import img4 from "../../assets/images/atp/unifilar.png";
+import img1 from "../../assets/images/claro/kmz.png";
+import img2 from "../../assets/images/claro/plano.png";
+import img3 from "../../assets/images/claro/unifilar2.png";
+import img4 from "../../assets/images/claro/unifilar.png";
 
 const imagenes = [
     {
@@ -16,7 +16,7 @@ const imagenes = [
     },
     {
       imagen: img2,
-      descripcion: "Multi Dwelling Unit – MDU, diseño y entregables para unidades multifamiliares, predios privados. ",
+      descripcion: "Planos de recorrido, cartografias, actualizaciones y diseño",
       
     },
     {

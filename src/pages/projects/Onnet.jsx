@@ -4,10 +4,9 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useEffect } from "react";
 
 import "./Onnet.css";
-import img1 from "../../assets/images/atp/kmz.png";
-import img2 from "../../assets/images/atp/plano.png";
-import img3 from "../../assets/images/atp/plano2.png";
-import img4 from "../../assets/images/atp/unifilar.png";
+import img1 from "../../assets/images/onnet/kmz.png";
+import img2 from "../../assets/images/onet/plano.png";
+import img3 from "../../assets/images/onnet/cartera.png";
 
 const imagenes = [
     {
@@ -21,13 +20,10 @@ const imagenes = [
     },
     {
       imagen: img3,
-      descripcion: "Single Dwelling Unit – SDU. Entregables de diseños de viviendas individuales, zonas externas, tanto cluster y subcluster. Recorridos desde Nodos principales hasta splitter de derivación, así como splitter secundarios de conexión final ",
+      descripcion: "Carteras de red para todos los proyectos, incluyendo Onnet-Telefonica, tanto de obras civiles como de construccion y diseño de red ",
       
     },
-    {
-      imagen: img4,
-      descripcion: "Unifilares de conexión. Entregables de unifilares de construcción, conexión y derivación hilo a hilo. Conservación de colores y bloques de acuerdo a requerimientos",
-    },
+  
   ];
 
 function Onnet() {

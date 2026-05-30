@@ -5,10 +5,9 @@ import { useEffect } from "react";
 
 import "./Ufinet.css";
 
-import img1 from "../../assets/images/atp/kmz.png";
-import img2 from "../../assets/images/atp/plano.png";
-import img3 from "../../assets/images/atp/plano2.png";
-import img4 from "../../assets/images/atp/unifilar.png";
+import img1 from "../../assets/images/ufinet/kmz.png";
+import img2 from "../../assets/images/ufinet/plano.png";
+import img3 from "../../assets/images/ufinet/unifilar.png";
 const imagenes = [
     {
       imagen: img1,
@@ -16,18 +15,15 @@ const imagenes = [
     },
     {
       imagen: img2,
-      descripcion: "Multi Dwelling Unit – MDU, diseño y entregables para unidades multifamiliares, predios privados. ",
+      descripcion: "Planos de distribucion, relevamiento, construcciòn Ufinet ",
       
     },
     {
       imagen: img3,
-      descripcion: "Single Dwelling Unit – SDU. Entregables de diseños de viviendas individuales, zonas externas, tanto cluster y subcluster. Recorridos desde Nodos principales hasta splitter de derivación, así como splitter secundarios de conexión final ",
+      descripcion: "Unifilares de distribuciòn de hilos para redes tanto troncales como ramificadas ultimas millas",
       
     },
-    {
-      imagen: img4,
-      descripcion: "Unifilares de conexión. Entregables de unifilares de construcción, conexión y derivación hilo a hilo. Conservación de colores y bloques de acuerdo a requerimientos",
-    },
+    
   ];
 
 function Ufinet() {

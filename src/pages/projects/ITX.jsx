@@ -4,10 +4,9 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useEffect } from "react";
 
 import "./ITX.css";
-import img1 from "../../assets/images/atp/kmz.png";
-import img2 from "../../assets/images/atp/plano.png";
-import img3 from "../../assets/images/atp/plano2.png";
-import img4 from "../../assets/images/atp/unifilar.png";
+import img1 from "../../assets/images/itx/kmz.png";
+import img2 from "../../assets/images/itx/plano.png";
+import img3 from "../../assets/images/atp/unifilar.png";
 const imagenes = [
     {
       imagen: img1,
@@ -15,19 +14,15 @@ const imagenes = [
     },
     {
       imagen: img2,
-      descripcion: "Multi Dwelling Unit – MDU, diseño y entregables para unidades multifamiliares, predios privados. ",
       descripcion: "Planos en DWG, Shape, PDF, de construcciòn de red ",
       
     },
     {
       imagen: img3,
-      descripcion: "Single Dwelling Unit – SDU. Entregables de diseños de viviendas individuales, zonas externas, tanto cluster y subcluster. Recorridos desde Nodos principales hasta splitter de derivación, así como splitter secundarios de conexión final ",
+      descripcion: "Unifilares tanto en .xlsx como en DWG de conexiòn y distribuciòn de hilos",
       
     },
-    {
-      imagen: img4,
-      descripcion: "Unifilares de conexión. Entregables de unifilares de construcción, conexión y derivación hilo a hilo. Conservación de colores y bloques de acuerdo a requerimientos",
-    },
+  
       
   ];
 
