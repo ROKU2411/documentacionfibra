@@ -88,15 +88,12 @@
 }
 
 .top-buttons{
-   position: absolute;
-  top: 20px;
-  left: 0;
+   position: relative;
+  flex-direction: column;
+  gap: 10px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 30px;
-  box-sizing: border-box;
-  z-index: 10;
+  padding: 0;
+  margin-bottom: 20px;
 }
 
 .nav-button{
@@ -109,9 +106,7 @@
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.5px;
-
   transition: all 0.3s ease;
-
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
@@ -133,12 +128,6 @@
 .fade-out{
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
-}
-.bottom-buttons {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
 }
 
 /* ========================= */
@@ -197,7 +186,7 @@
 @media (max-width: 480px) {
 
   .atp-container {
-    padding: 80px 15px 100px;
+    padding: 20px 15px 40px;
   }
 
   .atp-title {
@@ -246,22 +235,14 @@
     right: 2px;
   }
 
-  .top-buttons {
-    position: relative;
-    flex-direction: column;
-    gap: 10px;
-    padding: 0;
-    margin-bottom: 20px;
-  }
-
   .nav-button {
-    width: 100%;
-    font-size: 13px;
-    padding: 10px;
+     width: 100%;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
   }
 
   .bottom-buttons {
-    position: static;
-    margin-top: 20px;
+     margin-top: 30px;
   }
 }
