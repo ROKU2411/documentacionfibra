@@ -142,3 +142,128 @@
   right: 20px;
   z-index: 1000;
 }
+
+/* ========================= */
+/* TABLETS */
+/* ========================= */
+@media (max-width: 768px) {
+
+  .itx-title {
+    font-size: 36px;
+  }
+
+  .itx-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .image-card {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 0 40px;
+  }
+
+  .itx-image {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .image-description {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .arrow-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .left {
+    left: 5px;
+  }
+
+  .right {
+    right: 5px;
+  }
+
+  .nav-button {
+    font-size: 13px;
+    padding: 10px 15px;
+  }
+}
+
+/* ========================= */
+/* CELULARES */
+/* ========================= */
+@media (max-width: 480px) {
+
+  .itx-container {
+    padding: 80px 15px 100px;
+  }
+
+  .itx-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .itx-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
+  .image-card {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 0 35px;
+  }
+
+  .itx-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .image-description {
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .arrow-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .left {
+    left: 2px;
+  }
+
+  .right {
+    right: 2px;
+  }
+
+  .top-buttons {
+    position: relative;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .nav-button {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .bottom-buttons {
+    position: static;
+    margin-top: 20px;
+  }
+}
