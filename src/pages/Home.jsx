@@ -3,7 +3,7 @@ import disenoImg from "../assets/home/diseno.jpg";
 import rutasImg from "../assets/home/qgis.jpg";
 import documentoImg from "../assets/home/documentacion.jpg";
 import certificaImg from "../assets/home/trazas.png";
-import { FaWhatsapp, FaEnvelope, FaAmilia, FaCircleNotch, FaUniregistry, FaCodiepie, FaInfo, FaMagento, FaHandPointer } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaAmilia, FaCircleNotch, FaUniregistry, FaCodiepie, FaInfo, FaMagento, FaHandPointer, FaBraille, FaBuromobelexperte, FaChessBoard, FaDeezer, FaFirstdraft, FaSquarespace } from "react-icons/fa";
 import { CgEnter } from "react-icons/cg";
 import { CiTextAlignCenter } from "react-icons/ci";
 import logo from "../assets/images/logo.png";
@@ -15,31 +15,37 @@ export default function Home() {
                 title: "Diseño FTTH",
                 description:
                 "Diseño de redes FTTH optimizadas para despliegues urbanos y rurales.",
+                icon: <FaBraille />,
             },
             {
                 title: "Distribución ODN",
                 description:
                 "Planificación y distribución eficiente de la red óptica pasiva (ODN).",
+                icon: <FaBuromobelexperte />,
             },
             {
                 title: "Planos AutoCAD",
                 description:
                 "Elaboración de planos técnicos detallados en AutoCAD para proyectos de fibra óptica.",
+                icon: <FaChessBoard />,
             },
             {
                 title: "Documentación As-Built",
                 description:
                 "Generación de documentación final conforme a la ejecución del proyecto.",
+                icon: <FaDeezer />,
             },
             {
                 title: "Cálculo de Potencia Óptica",
                 description:
                 "Análisis y cálculo de pérdidas ópticas para garantizar el rendimiento de la red.",
+                icon: <FaFirstdraft />,
             },
             {
                 title: "Soporte para ISP",
                 description:
                 "Asistencia técnica especializada para proveedores de internet y telecomunicaciones.",
+                icon: <FaSquarespace />,
             },
             ];
 
@@ -424,23 +430,62 @@ export default function Home() {
         </div>
         </section>
 
-            {/* Sobre mí */}
-            <section id="about" className="py-24 px-6 border-t border-gray-900">
-                <div className="max-w-5xl mx-auto text-center">
-                <h3 className="text-4xl font-bold mb-6 text-cyan-400">
-                    Sobre mí
-                </h3>
+          {/* Sobre mí */}
+                <section id="about" className="py-24 px-6 border-t border-gray-900">
+                <div className="max-w-7xl mx-auto">
 
-                <p className="text-gray-400 text-lg leading-relaxed">
-                    Diseñador enfocado en redes FTTH y GPON, especializado en
-                    documentación técnica de acuerdo a requerimientos de clientes. Entregables de relevamiento,
-                    construcción, certificación y entregas finales. Con soporte constante en caso requerido para
-                    actualizaciones y modificaciones.
+                    <div className="text-center mb-16">
+                    <h3 className="text-4xl font-bold mb-6 text-cyan-400">
+                        Cobertura Integral del Proyecto
+                    </h3>
 
-                </p>
+                    <p className="text-gray-400 max-w-3xl mx-auto">
+                        Acompañamiento técnico durante todas las etapas del despliegue de
+                        redes FTTH y GPON, desde el relevamiento inicial hasta la
+                        certificación y entrega final.
+                    </p>
+                    </div>
+
+                    <div className="relative">
+
+                    {/* Línea principal */}
+                    <div className="hidden md:block absolute top-6 left-0 w-full h-1 bg-cyan-400/30"></div>
+
+                    <div className="grid md:grid-cols-6 gap-8 relative">
+
+                        {[
+                        "Relevamiento",
+                        "Gestión de Permisos",
+                        "Diseño",
+                        "Construcción",
+                        "Entrega",
+                        "Certificación"
+                        ].map((step, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col items-center text-center"
+                        >
+                            {/* Nodo */}
+                            <div className="w-12 h-12 rounded-full bg-cyan-400 text-black font-bold flex items-center justify-center z-10">
+                            {index + 1}
+                            </div>
+
+                            {/* Caja */}
+                            <div className="mt-4 bg-gray-900 border border-gray-800 rounded-2xl p-4 w-full hover:border-cyan-400 transition">
+                            <h4 className="font-semibold text-white">
+                                {step}
+                            </h4>
+                            </div>
+                        </div>
+                        ))}
+
+                    </div>
+
+                    </div>
+
                 </div>
-            </section>
-
+                </section>
+                
             {/* Servicios */}
             <section
                 id="services"
@@ -463,11 +508,13 @@ export default function Home() {
                     key={index}
                     className="bg-gray-900 border border-gray-800 rounded-3xl p-8 hover:border-cyan-400/40 hover:translate-y-[-5px] transition"
                     >
-                    <div className="text-4xl mb-4">⚙️</div>
+                    <div className="text-4xl mb-4">
+                        {service.icon}
+                    </div>
 
                     <h4 className="text-xl font-semibold mb-3">
                         {service.title}
-                    </h4>
+                    </h4>º
 
                     <p className="text-gray-400 text-sm leading-relaxed">
                         {service.description}
