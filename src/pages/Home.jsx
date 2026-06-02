@@ -117,7 +117,7 @@ export default function Home() {
 
                 <div className="hidden md:flex gap-4 text-sm text-gray-300">
                     <a href="#about" className="hover:text-cyan-400 transition">
-                    Conocenos
+                    Actividades
                     </a>
                     <a href="#services" className="hover:text-cyan-400 transition">
                     Servicios
